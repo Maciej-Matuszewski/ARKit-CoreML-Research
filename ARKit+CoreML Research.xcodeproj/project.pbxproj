@@ -9,19 +9,25 @@
 /* Begin PBXBuildFile section */
 		491B07101FFBCC2C009B7A54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B070F1FFBCC2C009B7A54 /* AppDelegate.swift */; };
 		491B07121FFBCC2C009B7A54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B07111FFBCC2C009B7A54 /* ViewController.swift */; };
-		491B07151FFBCC2C009B7A54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491B07131FFBCC2C009B7A54 /* Main.storyboard */; };
 		491B07171FFBCC2C009B7A54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491B07161FFBCC2C009B7A54 /* Assets.xcassets */; };
 		491B071A1FFBCC2C009B7A54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491B07181FFBCC2C009B7A54 /* LaunchScreen.storyboard */; };
+		491B07221FFBCE5F009B7A54 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B07211FFBCE5F009B7A54 /* Scene.swift */; };
+		499A945C1FFCF1AB00E14184 /* VGG16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 499A945B1FFCF1AB00E14184 /* VGG16.mlmodel */; };
+		49E3B0D21FFCCFBD00D21EEB /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 49E3B0D11FFCCFA100D21EEB /* Inceptionv3.mlmodel */; };
+		49E3B0D41FFCD2FE00D21EEB /* ClassificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3B0D31FFCD2FE00D21EEB /* ClassificationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		491B070C1FFBCC2C009B7A54 /* ARKit+CoreML Research.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ARKit+CoreML Research.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		491B070F1FFBCC2C009B7A54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		491B07111FFBCC2C009B7A54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		491B07141FFBCC2C009B7A54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		491B07161FFBCC2C009B7A54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		491B07191FFBCC2C009B7A54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		491B071B1FFBCC2C009B7A54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		491B07211FFBCE5F009B7A54 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		499A945B1FFCF1AB00E14184 /* VGG16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = VGG16.mlmodel; sourceTree = "<group>"; };
+		49E3B0D11FFCCFA100D21EEB /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		49E3B0D31FFCD2FE00D21EEB /* ClassificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +62,10 @@
 			children = (
 				491B070F1FFBCC2C009B7A54 /* AppDelegate.swift */,
 				491B07111FFBCC2C009B7A54 /* ViewController.swift */,
-				491B07131FFBCC2C009B7A54 /* Main.storyboard */,
+				491B07211FFBCE5F009B7A54 /* Scene.swift */,
+				49E3B0D31FFCD2FE00D21EEB /* ClassificationService.swift */,
+				49E3B0D11FFCCFA100D21EEB /* Inceptionv3.mlmodel */,
+				499A945B1FFCF1AB00E14184 /* VGG16.mlmodel */,
 				491B07161FFBCC2C009B7A54 /* Assets.xcassets */,
 				491B07181FFBCC2C009B7A54 /* LaunchScreen.storyboard */,
 				491B071B1FFBCC2C009B7A54 /* Info.plist */,
@@ -125,7 +134,6 @@
 			files = (
 				491B071A1FFBCC2C009B7A54 /* LaunchScreen.storyboard in Resources */,
 				491B07171FFBCC2C009B7A54 /* Assets.xcassets in Resources */,
-				491B07151FFBCC2C009B7A54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,21 +145,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				491B07121FFBCC2C009B7A54 /* ViewController.swift in Sources */,
+				499A945C1FFCF1AB00E14184 /* VGG16.mlmodel in Sources */,
+				49E3B0D21FFCCFBD00D21EEB /* Inceptionv3.mlmodel in Sources */,
+				49E3B0D41FFCD2FE00D21EEB /* ClassificationService.swift in Sources */,
 				491B07101FFBCC2C009B7A54 /* AppDelegate.swift in Sources */,
+				491B07221FFBCE5F009B7A54 /* Scene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		491B07131FFBCC2C009B7A54 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				491B07141FFBCC2C009B7A54 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		491B07181FFBCC2C009B7A54 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -275,9 +279,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SK8PDF7SG9;
 				INFOPLIST_FILE = "ARKit+CoreML Research/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.matuszewski.ARKit-CoreML-Research";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matuszewski.research;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -289,9 +294,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SK8PDF7SG9;
 				INFOPLIST_FILE = "ARKit+CoreML Research/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.matuszewski.ARKit-CoreML-Research";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matuszewski.research;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
